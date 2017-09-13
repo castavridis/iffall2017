@@ -1,0 +1,47 @@
+/* Setup */
+html,
+body {
+	background-color: oldlace; /* Better than antiquewhite! */
+	font-family: system-ui;
+}
+.section {
+	padding: 24px;
+	width: 800px;
+	margin: auto;
+}
+.topic {
+	background-color: white;
+	padding: 24px;
+}
+.example {
+	margin-top: 36px;
+}
+.code {
+	font-family: monospace;
+	background-color: gainsboro;
+	padding: 12px;
+	margin-bottom: 12px;
+}
+
+/* Examples */
+.monospace {
+	font-family: monospace;
+}
+.fantasy {
+	font-family: fantasy;
+}
+.point {
+	font-size: 16pt;
+}
+.pixel {
+	font-size: 16px;
+}
+.em .grandparent {
+	font-size: 1em;
+}
+.em .parent {
+	font-size: 2em;
+}
+.em .child {
+	font-size: 2em;
+}

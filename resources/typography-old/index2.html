@@ -1,0 +1,84 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Intro to Web Typography</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<div id="header" class="section">
+			<h1>Controlling Type on the Web</h1>
+			<ul id="navigaion">
+				<li>
+					<a href="#css-properties">CSS Properties</a>
+				</li>
+				<li>
+					<a href="#html-tags">HTML Tags</a>
+				</li>
+				<li>
+					<a href="#web-fonts">Web Fonts</a>
+				</li>
+			</ul>
+		</div>
+		<div id="css-properties" class="section">
+			<h2>CSS Properties</h2>
+			<code>
+				css-property-name: value;<br/>
+				css-property-name: value | other-valid-value | other-valid-value;
+			</code>
+			<div class="font-family topic">
+				<h3>font-family: serif | sans-serif | monospace | cursive | fantasy | system-ui;</h3>
+				<div class="monospace example">
+					<code>font-family: monospace;</code>
+					Sphinx of black quartz, judge my vow.
+				</div>
+				<div class="fantasy example">
+					<code>font-family: fantasy;</code>
+					Sphinx of black quartz, judge my vow.
+				</div>
+			</div>
+			<div class="font-size topic">
+				<h3>font-size: #pt | #px | #em | #rem | #%</h3>
+				Points and pixels are absolute
+				<div class="point example">
+					<code>font-size: 16pt;</code>
+					Points (pt) are 1/72in.
+				</div>
+				<div class="pixel example">
+					<code>font-size: 16px;</code>
+					Pixels (px) are 1/96in.
+				</div>
+				<div class="em example">
+					<code>font-size: 2em;</code>
+					<div class="grandparent">
+						Grandparent 1em
+						<div class="parent">
+							Parent 2em
+							<div class="child">
+								Child 2em
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="html-tags" class="section">
+			<h2>HTML Tags</h2>
+		</div>
+		<div id="web-fonts" class="section">
+			<h2>Web Fonts</h2>
+			<h3>Web-Safe Fonts</h3>
+			<p>Fonts that are pre-installed on most computers. ex) Arial, Times New Roman, Courier</p>
+			<h3>Web Font Services</h3>
+			<ul>
+				<li>Google Fonts</li>
+				<li>Typekit</li>
+				<li>Cloud.Typography</li>
+			</ul>
+			<h3>Icon Fonts</h3>
+			<ul>
+				<li>Font-Awesome</li>
+				<li>IcoMoon</li>
+			</ul>
+		</div>
+	</body>
+</html>

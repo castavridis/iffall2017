@@ -1,0 +1,199 @@
+<!doctype html>
+<html>
+<head>
+	<title>Controlling Web Typography</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+	<!--Comments-->
+	<h1>Controlling Web Typography</h1>
+	<div id="navigation" class="section">
+		<a href="#css-properties">CSS Properties</a> <br />
+		<a href="#type-tags">Type Tags</a> <br />
+		<a href="#font-services">Font Services</a>
+	</div>
+	<div id="css-properties" class="section">
+		<code>
+			css-property: value;<br/>
+			css-property: value-one | value-two | value-three;
+		</code>
+		<div class="font-family sub-section">
+			<code>font-family: "Publico", Georgia, serif;<br />
+			font-family: serif | sans-serif | cursive | fantasy | system-ui;</code>
+			<p class="serif"></p>
+			<p class="sans-serif"></p>
+			<p class="cursive"></p>
+			<p class="fantasy"></p>
+			<p class="system-ui"></p>
+		</div>
+		<div class="font-size sub-section">
+			<code>font-size: #pt | #px | #em | #rem | #%;
+			</code>
+			<div class="pt">
+				<!--absolute measurements 1pt = 1/72in-->
+				<code>font-size: 16pt;</code>
+				font-size: 16pt;
+			</div>
+			<div class="px">
+				<!--absolute measurements 1px = 1/96in-->
+				<code>font-size: 16px;</code>
+				font-size: 16px;
+			</div>
+			<!---->
+			<div class="em">
+				<!-- 1em = 16px -->
+				<code>font-size: 1em;</code>
+				font-size: 1em;
+				<div class="grandparent">
+					font-size: 1em; (16px)
+					<div class="parent">
+						font-size: 2em; (32px)
+						<div class="child">
+							font-size: 2em; (64px)
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="rem">
+				<!-- 1rem = 16px; -->
+				<code>font-size: 1rem;</code>
+				<div class="grandparent">
+					font-size: 1rem;
+					<div class="parent">
+						font-size: 2rem;
+						<div class="child">
+							font-size: 2rem;
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="percent">
+				<code>font-size: 100%;</code>
+				<div class="grandparent">
+					font-size: 100%;
+					<div class="parent">
+						font-size: 200%;
+						<div class="child">
+							font-size: 200%;
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="font-weight sub-section">
+			<code>font-weight: normal | bold | 100 | 200 | 300 | 400 | 500 | 600 | 700;</code>
+			<div class="bold">
+				font-weight: bold; (700)
+			</div>
+			<div class="weight-700">
+				font-weight: 700;
+			</div>
+			<div>
+				font-weight: normal; (default, or 400)
+			</div>
+			<div class="weight-400">
+				font-weight: 400;
+			</div>
+		</div>
+		<div class="font-style sub-section">
+			<div class="normal">
+				font-style: normal;
+			</div>
+			<div class="italic">
+				font-style: italic;
+			</div>
+			<div class="oblique">
+				font-style: oblique;
+			</div>
+		</div>
+		<div class="line-height sub-section">
+			<p class="unitless">
+				<!-- unitless value sets the line height as value * font-size-->
+				<code>
+					line-height: 1.45;
+				</code>
+				Globular star cluster cosmic ocean. Worldlets billions upon billions brain is the seed of intelligence astonishment made in the interiors of collapsing stars rogue Sea of Tranquility are creatures of the cosmos, muse about of brilliant syntheses not a sunrise but a galaxyrise concept of the number one citizens of distant epochs, are creatures of the cosmos circumnavigated, extraordinary claims require extraordinary evidence across the centuries of brilliant syntheses, trillion, concept of the number one emerged into consciousness, preserve and cherish that pale blue dot. Laws of physics at the edge of forever tesseract. Intelligent beings and billions upon billions upon billions upon billions upon billions upon billions upon billions.
+			</p>
+			<p class="px">
+				<code>
+					font-size: 32px;<br />
+					line-height: 16px;
+				</code>
+				Globular star cluster cosmic ocean. Worldlets billions upon billions brain is the seed of intelligence astonishment made in the interiors of collapsing stars rogue Sea of Tranquility are creatures of the cosmos, muse about of brilliant syntheses not a sunrise but a galaxyrise concept of the number one citizens of distant epochs, are creatures of the cosmos circumnavigated, extraordinary claims require extraordinary evidence across the centuries of brilliant syntheses, trillion, concept of the number one emerged into consciousness, preserve and cherish that pale blue dot. Laws of physics at the edge of forever tesseract. Intelligent beings and billions upon billions upon billions upon billions upon billions upon billions upon billions.
+			</p>
+			<p class="em">
+				<code>line-height: 1.45em;</code>
+				Globular star cluster cosmic ocean. Worldlets billions upon billions brain is the seed of intelligence astonishment made in the interiors of collapsing stars rogue Sea of Tranquility are creatures of the cosmos, muse about of brilliant syntheses not a sunrise but a galaxyrise concept of the number one citizens of distant epochs, are creatures of the cosmos circumnavigated, extraordinary claims require extraordinary evidence across the centuries of brilliant syntheses, trillion, concept of the number one emerged into consciousness, preserve and cherish that pale blue dot. Laws of physics at the edge of forever tesseract. Intelligent beings and billions upon billions upon billions upon billions upon billions upon billions upon billions.
+			</p>
+		</div>
+		<div class="letter-spacing sub-section">
+			<code>letter-spacing: 5px;<br/>
+			letter-spacing: -5px;</code>
+			<p class="positive">Globular star cluster cosmic ocean.</p>
+			<p class="negative">Globular star cluster cosmic ocean.</p>
+		</div>
+		<div class="text-align sub-section">
+			<code>text-align: left | center | right | justify;</code>
+			<p class="left">Laws of physics at the edge of forever tesseract. Intelligent beings and billions upon billions upon billions upon billions upon billions upon billions upon billions.</p>
+			<p class="center">Laws of physics at the edge of forever tesseract. Intelligent beings and billions upon billions upon billions upon billions upon billions upon billions upon billions.</p>
+			<p class="right">Laws of physics at the edge of forever tesseract. Intelligent beings and billions upon billions upon billions upon billions upon billions upon billions upon billions.</p>
+			<p class="justify">Laws of physics at the edge of forever tesseract. Intelligent beings and billions upon billions upon billions upon billions upon billions upon billions upon billions.</p>
+		</div>
+		<div class="text-decoration sub-section">
+			<code>text-decoration: none | underline | overline | line-through</code>
+			<p class="none">Laws of physics at the edge of forever tesseract.</p>
+			<p class="underline">Laws of physics at the edge of forever tesseract.</p>
+			<p class="overline">Laws of physics at the edge of forever tesseract.</p>
+			<p class="line-through">Laws of physics at the edge of forever tesseract.</p>
+			<p class="complex">Laws of physics at the edge of forever tesseract.</p>
+		</div>
+		<div class="text-transform sub-section">
+			<code>text-transform: uppercase | lowercase | capitalize;</code>
+			<p class="capitalize">Laws of physics at the edge of forever tesseract.</p>
+		</div>
+		<div class="text-indent sub-section">
+			<code>text-indent: #px | #%</code>
+			<p class="px">
+				Astonishment colonies! Rich in mystery the sky calls to us billions upon billions astonishment birth network of wormholes, corpus callosum galaxies vanquish the impossible Sea of Tranquility kindling the energy hidden in matter! Science, dispassionate extraterrestrial observer the carbon in our apple pies, galaxies, circumnavigated, Orion's sword finite but unbounded? Trillion preserve and cherish that pale blue dot, Cambrian explosion, at the edge of forever gathered by gravity, encyclopaedia galactica and billions upon billions upon billions upon billions upon billions upon billions upon billions.
+			</p>
+			<p class="percent">
+				Astonishment colonies! Rich in mystery the sky calls to us billions upon billions astonishment birth network of wormholes, corpus callosum galaxies vanquish the impossible Sea of Tranquility kindling the energy hidden in matter! Science, dispassionate extraterrestrial observer the carbon in our apple pies, galaxies, circumnavigated, Orion's sword finite but unbounded? Trillion preserve and cherish that pale blue dot, Cambrian explosion, at the edge of forever gathered by gravity, encyclopaedia galactica and billions upon billions upon billions upon billions upon billions upon billions upon billions.
+			</p>
+		</div>
+		<div class="color sub-section">
+			<code>color: lightsalmon | #FFA07A | rgb(0,0,0) | rgba(0,0,0,0)</code>
+			<p class="css-name">Laws of physics at the edge of forever tesseract.</p>
+			<p class="hex">Laws of physics at the edge of forever tesseract.</p>
+			<p class="rgb">Laws of physics at the edge of forever tesseract.</p>
+			<p class="rgba">Laws of physics at the edge of forever tesseract.</p>
+		</div>
+	</div>
+	<div id="type-tags" class="section">
+		<div class="block sub-section">
+			<p>Paragraph - Laws of physics at the edge of forever tesseract.</p>
+			<h1>Heading 1</h1>
+			<h2>Heading 2</h2>
+			<h3>Heading 3</h3>
+			<h4>Heading 4</h4>
+			<h5>Heading 5</h5>
+			<h6>Heading 6</h6>
+		</div>
+		<div class="inline sub-section">
+			<p><b>Paragraph</b> - Laws of physics at the edge of forever tesseract.</p>
+			<p><i>Paragraph</i> - Laws of physics at the edge of forever tesseract.</p>
+			<p><em>Paragraph</em> - Laws of physics at the edge of forever tesseract.</p>
+			<p><strong>Paragraph</strong> - Laws of physics at the edge of forever tesseract.</p>
+			<p><sup>Paragraph</sup> - Laws of physics at the edge of forever tesseract.</p>
+			<p><sub>Paragraph</sub> - Laws of physics at the edge of forever tesseract.</p>
+			<p><span class="complex">Paragraph</span> - Laws of physics at the edge of forever tesseract.</p>
+		</div>
+	</div>
+</body>
+</html>
+
+
+
+
+
+

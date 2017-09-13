@@ -1,0 +1,175 @@
+/* CSS Comments */
+html,
+body {
+	background-color: oldlace;
+	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+body {
+	width: 800px;
+	margin: auto;
+}
+code {
+	display: block;
+}
+#navigation {
+	background-color: lightsalmon;
+}
+.section {
+	padding: 24px;
+}
+.sub-section {
+	background-color: white;
+	margin: 24px;
+}
+.font-size {}
+.pt {
+	font-size: 16pt;
+}
+.px {
+	font-size: 16px;
+}
+.em {
+	font-size: 1em;
+}
+.em .grandparent {
+	font-size: 1em;
+}
+.em .parent {
+	font-size: 2em;
+}
+.em .child {
+	font-size: 2em;
+}
+.rem {
+	font-size: 1rem;
+}
+.rem .grandparent {
+	font-size: 1rem;
+}
+.rem .parent {
+	font-size: 2rem;
+}
+.rem .child {
+	font-size: 2rem;
+}
+.percent {
+	font-size: 100%;
+}
+.percent .grandparent {
+	font-size: 100%;
+}
+.percent .parent {
+	font-size: 200%;
+}
+.percent .child {
+	font-size: 200%;
+}
+.font-weight .bold {
+	font-weight: bold;
+}
+.font-weight .weight-700 {
+	font-weight: 700;
+}
+.font-weight .weight-400 {
+	font-weight: 400;
+}
+.font-style .normal {
+	font-style: normal;
+}
+.font-style .italic {
+	font-style: italic;
+}
+.font-style .oblique {
+	font-style: oblique;
+}
+.line-height .unitless {
+	font-size: 20px;
+	line-height: 1.45; /* 29px */
+}
+.line-height .px {
+	font-size: 32px;
+	line-height: 16px;	
+}
+.line-height .em {
+	line-height: 1.45em;
+}
+.letter-spacing .positive {
+	letter-spacing: 5px;
+}
+.letter-spacing .negative {
+	letter-spacing: -5px;
+}
+.text-align p {
+	width: 300px;
+}
+.text-align .left {
+	text-align: left;
+}
+.text-align .center {
+	text-align: center;
+}
+.text-align .right {
+	text-align: right;
+}
+.text-align .justify {
+	text-align: justify;
+}
+.text-decoration .none {
+	text-decoration: none;
+}
+.text-decoration .underline {
+	text-decoration: underline;
+}
+.text-decoration .overline {
+	text-decoration: overline;
+}
+.text-decoration .line-through {
+	text-decoration: line-through;
+}
+.text-decoration .complex,
+.inline .complex {
+	text-decoration: overline underline wavy aquamarine;
+}
+.inline .complex {
+	color: red;
+	font-size: 1.5rem;
+}
+.text-transform .capitalize {
+	text-transform: capitalize;
+}
+.text-indent .px {
+	text-indent: 45px;
+}
+.text-indent .percent {
+	text-indent: 45%;
+}
+
+.color p {
+	font-size: 3rem;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+.color .css-name {
+	color: lightsalmon;
+}
+.color .hex {
+	color: #FFA07A;
+}
+.color .rgb {
+	color: rgb(255, 160, 122);
+}
+.color .rgba {
+	color: rgba(255, 160, 122, 0.5);
+}
+
+
+
+
+
+
+
+
+
+
+
+
