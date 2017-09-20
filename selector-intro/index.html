@@ -1,0 +1,640 @@
+<!doctype html>
+<html>
+<head>
+	<title>Introduction to Complex CSS Selectors</title>
+	<meta charset="UTF-8" />
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/7.0.0/normalize.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Cutive+Mono|Karla" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<header>
+		<nav>
+			<h1>Introduction to Complex CSS Selectors</h1>
+			<ul>
+				<li>
+					<a href="#basic">Basic Selectors</a>
+					<ul>
+						<li>
+							<a href="#tags">Tags</a>
+						</li>
+						<li>
+							<a href="#classes">Classes</a>
+						</li>
+						<li>
+							<a href="#ids">IDs</a>
+						</li>
+						<li>
+							<a href="#multiple-selectors">Multiple Selectors</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#nested">Nested Selectors</a>
+					<ul>
+						<li>
+							<a href="#descendants">Descendants</a>
+						</li>
+						<li>
+							<a href="#child">Child</a>
+						</li>
+						<li>
+							<a href="#adjacent">Adjacent Sibling</a>
+						</li>
+						<li>
+							<a href="#general">General Sibling</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#pseudo-classes">Pseudo Classes</a>
+					<ul>
+						<li>
+							<a href="#a-link">a:link</a>
+						</li>
+						<li>
+							<a href="#a-visited">a:visited</a>
+						</li>
+						<li>
+							<a href="#hover">:hover</a>
+						</li>
+						<li>
+							<a href="#active">:active</a>
+						</li>
+						<li>
+							<a href="#first">:first-child</a>
+						</li>
+						<li>
+							<a href="#last">:last-child</a>
+						</li>
+					</ul>
+				</li>
+				<li>
+					<a href="#pseudo-elements">Pseudo Elements</a>
+					<ul>
+						<li>
+							<a href="#after">::after</a>
+						</li>
+						<li>
+							<a href="#before">::before</a>
+						</li>
+					</ul>
+				</li>
+			</ul>
+		</nav>
+	</header>
+	<section class="wrapper">
+		<section id="intro" class="topic">
+			<h2>About This Document</h2>
+			<section class="subsection">
+				<h3>Sections</h3>
+				<p>Section description with generic selector rule set with property declarations represented as <code>...</code>.</p>
+				<code class="block">selector {...}</code>
+				<div class="example">
+					<h4>Example</h4>
+					<p>Code for example will show CSS selectors that more closely align with CSS rule sets defined in <code>styles.css</code>.</p>
+					<code class="block">
+						div { ... }<br />
+						div.selected { ... }<br />
+						div.selected.blue { ... }<br />
+						div.selected.green { ... }
+					</code>
+					<h4>Legend</h4>
+					<div>
+						<p>Un-selected element</p>
+					</div>
+					<div class="selected">
+						<p>Selected element</p>
+					</div>
+					<div class="selected blue">
+						<p>Selected element</p>
+					</div>
+					<div class="selected green">
+						<p>Selected element</p>
+					</div>
+				</div>
+			</section>
+		</section>
+		<section id="basic" class="topic">
+			<h2>Basic Selectors</h2>
+			<section id="tags" class="subsection">
+				<h3>Tags</h3>
+				<p>Bare element tag. No <code>#</code>, no <code>.</code>. Global changes to all selected tags.</p>
+				<code class="block">
+					tag { css-property: value; }
+				</code>
+				<div class="example">
+					<h4>Example</h4>
+					<code class="block">
+						div {...}
+					</code>
+					<div>
+						&lt;div&gt;&lt;/div&gt;
+					</div>
+					<div>
+						&lt;div&gt;&lt;/div&gt;
+					</div>
+					<div>
+						&lt;div&gt;&lt;/div&gt;
+					</div>
+					<div>
+						&lt;div&gt;&lt;/div&gt;
+					</div>
+					<div>
+						&lt;div&gt;&lt;/div&gt;
+					</div>
+				</div>
+			</section>
+			<section id="classes" class="subsection">
+				<h3>Classes</h3>
+				<p>Uses <code>.</code> before class name. e.g.) <code>.selected</code> to select <code>&lt;div class="selected"&gt;&lt;/div&gt;</code>. Use classes for styles you want to use again and again.</p>
+				<code class="block">
+					.class { css-property: value; }
+				</code>
+				<div class="example">
+					<h4>Example</h4>
+					<code class="block">
+						.selected {...}<br />
+						.selected.blue {...}
+					</code>
+					<div>
+						&lt;div&gt;&lt;/div&gt;
+					</div>
+					<div class="selected">
+						&lt;div class="selected"&gt;&lt;/div&gt;
+					</div>
+					<div class="selected">
+						&lt;div class="selected"&gt;&lt;/div&gt;
+					</div>
+					<div class="selected blue">
+						&lt;div class="selected blue"&gt;&lt;/div&gt;
+					</div>
+					<div>
+						&lt;div&gt;&lt;/div&gt;
+					</div>
+				</div>
+			</section>
+			<section id="ids" class="subsection">
+				<h3>IDs</h3>
+				<p>Uses <code>#</code> before id. e.g.) <code>#selected-by-id</code>. IDs are used for unique elements and can be used for other purposes.</p>
+				<code class="block">
+					#id { css-property: value; }
+				</code>
+				<div class="example">
+					<h4>Example</h4>
+					<code class="block">
+						.selected {...}<br/>
+						#selected-by-id {...}
+					</code>
+					<div>
+						&lt;div&gt;&lt;/div&gt;
+					</div>
+					<div>
+						&lt;div&gt;&lt;/div&gt;
+					</div>
+					<div id="selected-by-id" class="selected">
+						&lt;div id="selected-by-id" class="selected"&gt;&lt;/div&gt;
+					</div>
+					<div class="selected">
+						&lt;div class="selected"&gt;&lt;/div&gt;
+					</div>
+					<div class="selected">
+						&lt;div class="selected"&gt;&lt;/div&gt;
+					</div>
+				</div>
+			</section>
+			<section id="multiple-selectors" class="subsection">
+				<h3>Multiple Selectors</h3>
+				<p>You can select multiple selectors to get more specific with your styling.</p>
+				<code class="block">
+					tag.class { ... }
+					.class.class-two.class-three { ... }
+					#id.class { ... }
+				</code>
+				<div class="example">
+					<h4>Example</h4>
+					<code class="block">
+						.selected.big {...}<br/>
+						.selected.blue.big {...}
+					</code>
+					<div>
+						&lt;div&gt;&lt;/div&gt;
+					</div>
+					<div class="selected">
+						&lt;div class="selected"&gt;&lt;/div&gt;
+					</div>
+					<div class="selected big">
+						&lt;div class="selected big"&gt;&lt;/div&gt;
+					</div>
+					<div class="selected blue">
+						&lt;div class="selected blue"&gt;&lt;/div&gt;
+					</div>
+					<div class="selected blue big">
+						&lt;div class="selected blue big"&gt;&lt;/div&gt;
+					</div>
+				</div>
+			</section>
+		</section>
+		<section id="nested" class="topic">
+			<h2>Nested Selectors</h2>
+			<section id="descendants" class="subsection">
+				<h3>Descendants</h3>
+				<p>Descendants defined by a single space between each selector.</p>
+				<code class="block">
+					.ancestor .descendant { css-property: value; }
+				</code>
+				<div class="nested-example">
+					<h4>Example</h4>
+					<code class="block">
+						.ancestor .descendant { ... }
+					</code>
+					<div class="ancestor">
+						&lt;div class="ancestor"&gt;&lt;/div&gt;
+						<div class="descendant">
+							&lt;div class="descendant"&gt;&lt;/div&gt;
+							<div class="descendant">
+								&lt;div class="descendant"&gt;&lt;/div&gt;
+								<div class="descendant">
+									&lt;div class="descendant"&gt;&lt;/div&gt;
+								</div>
+							</div>
+						</div>
+						<div class="descendant">
+							&lt;div class="descendant"&gt;&lt;/div&gt;
+							<div class="descendant">
+								&lt;div class="descendant"&gt;&lt;/div&gt;
+								<div class="descendant">
+									&lt;div class="descendant"&gt;&lt;/div&gt;
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="child" class="subsection">
+				<h3>Child (Immediate Descendants)</h3>
+				<p>Uses <code>></code> only the children elements, or immediate descendants, matching the selector following the <code>></code> are selected.</p>
+				<code class="block">
+					.ancestor > .descendant { css-property: value; }
+				</code>
+				<div class="nested-example">
+					<h4>Example</h4>
+					<code class="block">
+						.ancestor > .descendant { ... }
+					</code>
+					<div class="ancestor">
+						&lt;div class="ancestor"&gt;&lt;/div&gt;
+						<div class="descendant">
+							&lt;div class="descendant"&gt;&lt;/div&gt;
+							<div class="descendant">
+								&lt;div class="descendant"&gt;&lt;/div&gt;
+								<div class="descendant">
+									&lt;div class="descendant"&gt;&lt;/div&gt;
+								</div>
+							</div>
+						</div>
+						<div class="descendant">
+							&lt;div class="descendant"&gt;&lt;/div&gt;
+							<div class="descendant">
+								&lt;div class="descendant"&gt;&lt;/div&gt;
+								<div class="descendant">
+									&lt;div class="descendant"&gt;&lt;/div&gt;
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="adjacent" class="subsection">
+				<h3>Adjacent Sibling</h3>
+				<p>Style the very next sibling. Note that the first selector sibling is not styled but it's adjacent sibling is. Siblings must be part of the same parent element.</p>
+				<code class="block">
+					.sibling + .sibling { css-property: value; }
+				</code>
+				<div class="example">
+					<h4>Example</h4>
+					<code class="block">
+						.sibling-selected + .sibling-selected { ... }
+					</code>
+					<div class="sibling">
+						&lt;div class="sibling"&gt;&lt;/div&gt;
+					</div>
+					<div class="sibling-selected">
+						&lt;div class="sibling-selected"&gt;&lt;/div&gt;
+					</div>
+					<div class="sibling-selected">
+						&lt;div class="sibling-selected"&gt;&lt;/div&gt;
+					</div>
+					<div class="sibling">
+						&lt;div class="sibling-selected"&gt;&lt;/div&gt;
+					</div>
+					<div class="sibling-selected">
+						&lt;div class="sibling"&gt;&lt;/div&gt;
+					</div>
+				</div>
+			</section>
+			<section id="general" class="subsection">
+				<h3>General Sibling</h3>
+				<p>
+					Style any sibling following the first selector. Siblings must be part of the same parent element.
+				</p>
+				<code class="block">
+					.sibling ~ .sibling { css-property: value; }
+				</code>
+				<div class="example">
+					<h4>Example</h4>
+					<code class="block">
+						.sibling-selected ~ .sibling-selected { ... }
+					</code>
+					<div class="sibling-selected">
+						&lt;div class="sibling-selected"&gt;&lt;/div&gt;
+					</div>
+
+					<div class="sibling">
+						&lt;div class="sibling"&gt;&lt;/div&gt;
+					</div>
+
+					<div class="sibling-selected">
+						&lt;div class="sibling-selected"&gt;&lt;/div&gt;
+					</div>
+
+					<div class="sibling">
+						&lt;div class="sibling"&gt;&lt;/div&gt;
+					</div>
+
+					<div class="sibling-selected">
+						&lt;div class="sibling-selected"&gt;&lt;/div&gt;
+					</div>
+				</div>
+			</section>
+		</section>
+		<section id="pseudo-classes" class="topic">
+			<h2>Pseudo Classes</h2>
+			<p>Pseudo class selectors start with a colon, <code>:psuedo-class</code>. They allow styling of different states of elements like <code>:visited</code>, <code>:hover</code>.</p>
+			<section id="a-link" class="subsection">
+				<h3>a:link</h3>
+				<p>Select anchors that haven't been visited.</p>
+				<code class="block">
+					{ css-property: value; }
+				</code>
+				<div class="example">
+					<h4>Example</h4>
+					<code class="block">
+						a:link { ... }
+					</code>
+					<p>
+						<a href="http://www.gooooooooooooooooooooooooooooooooooooooooooooooooooooogle.com/#">Goo....gle</a>
+					</p>
+				</div>
+			</section>
+			<section id="a-visited" class="subsection">
+				<h3>a:visited</h3>
+				<p>Select anchors that have been visited.</p>
+				<code class="block">
+					a:visited { ... }
+				</code>
+				<div class="example">
+					<p>
+						<a href="http://fall2017.wudesign.me/assignments.php">Interaction Foundations</a>
+					</p>
+				</div>
+			</section>
+			<section id="hover" class="subsection">
+				<h3>:hover</h3>
+				<p>Style for any element on mouseover, or hover.</p>
+				<code class="block">
+					:hover { ... }<br/>
+					tag:hover { ... }<br/>
+					.class:hover { ... }<br/>
+					#id:hover { ... }<br/>
+				</code>
+				<div class="example">
+					<h4>Example</h4>
+					<code class="block">.hover-example:hover{}</code>
+					<div class="hover-example">
+						&lt;div class="hover-example"&gt;&lt;/div&gt;
+					</div>
+					<div class="hover-example">
+						&lt;div class="hover-example"&gt;&lt;/div&gt;
+					</div>
+					<div class="hover-example">
+						&lt;div class="hover-example"&gt;&lt;/div&gt;
+					</div>
+					<div class="hover-example">
+						&lt;div class="hover-example"&gt;&lt;/div&gt;
+					</div>
+					<div class="hover-example">
+						&lt;div class="hover-example"&gt;&lt;/div&gt;
+					</div>
+				</div>
+			</section>
+			<section id="active" class="subsection">
+				<h3>:active</h3>
+				<p>Style for any element on mousedown, or click-and-hold.</p>
+				<code class="block">
+					:active { ... }<br/>
+					tag:active { ... }<br/>
+					.class:active { ... }<br/>
+					#id:active { ... }<br/>
+				</code>
+				<div class="example">
+					<h4>Example</h4>
+					<code class="block">.active-example:hover{}</code>
+					<div class="active-example">
+						&lt;div class="active-example"&gt;&lt;/div&gt;
+					</div>
+					<div class="active-example">
+						&lt;div class="active-example"&gt;&lt;/div&gt;
+					</div>
+					<div class="active-example">
+						&lt;div class="active-example"&gt;&lt;/div&gt;
+					</div>
+					<div class="active-example">
+						&lt;div class="active-example"&gt;&lt;/div&gt;
+					</div>
+					<div class="hover-example active-example">
+						&lt;div class="hover-example active-example"&gt;&lt;/div&gt;
+					</div>
+				</div>
+			</section>
+			<section id="first" class="subsection">
+				<h3>:first-child</h3>
+				<p>Styles any child <em>element</em> that is the first child of it's parent.</p>
+				<code class="block">
+					:first-child { ... }<br/>
+					tag:first-child{ ... }<br/>
+					.class:first-child { ... }<br/>
+					#id:first-child { ... }<br/>
+				</code>
+				<div class="nested-example">
+					<h4>Example</h4>
+					<code class="block">.ancestor :first-child{}</code>
+					<div class="ancestor">
+						&lt;div class="ancestor"&gt;&lt;/div&gt;
+						<div class="descendant">
+							&lt;div class="descendant"&gt;&lt;/div&gt;
+						</div>
+						<div class="descendant">
+							&lt;div class="descendant"&gt;&lt;/div&gt;
+						</div>
+						<div class="descendant">
+							&lt;div class="descendant"&gt;&lt;/div&gt;
+						</div>
+						<div class="descendant">
+							&lt;div class="descendant"&gt;&lt;/div&gt;
+							<div class="descendant">
+								&lt;div class="descendant"&gt;&lt;/div&gt;
+							</div>
+							<div class="descendant">
+								&lt;div class="descendant"&gt;&lt;/div&gt;
+							</div>
+						</div>
+						<div class="descendant">
+							&lt;div class="descendant"&gt;&lt;/div&gt;
+						</div>
+					</div>
+					<div class="ancestor">
+						&lt;div class="ancestor"&gt;&lt;/div&gt;
+						<h5>Now, &lt;h5&gt; is the :first-child!</h5>
+						<div class="descendant">
+							&lt;div class="descendant"&gt;&lt;/div&gt;
+						</div>
+						<div class="descendant">
+							&lt;div class="descendant"&gt;&lt;/div&gt;
+						</div>
+						<div class="descendant">
+							&lt;div class="descendant"&gt;&lt;/div&gt;
+						</div>
+						<div class="descendant">
+							&lt;div class="descendant"&gt;&lt;/div&gt;
+							<div class="descendant">
+								&lt;div class="descendant"&gt;&lt;/div&gt;
+							</div>
+							<div class="descendant">
+								&lt;div class="descendant"&gt;&lt;/div&gt;
+							</div>
+						</div>
+						<div class="descendant">
+							&lt;div class="descendant"&gt;&lt;/div&gt;
+						</div>
+					</div>
+				</div>
+			</section>
+			<section id="last" class="subsection">
+				<h3>:last-child</h3>
+				<p>Styles any child <em>element</em> that is the last child element of it's parent.</p>
+				<code class="block">
+					:last-child { ... }<br/>
+					tag:last-child{ ... }<br/>
+					.class:last-child { ... }<br/>
+					#id:last-child { ... }<br/>
+				</code>
+				<div class="nested-example">
+					<h4>Example</h4>
+					<code class="block">.ancestor :last-child{}</code>
+					<div class="ancestor">
+						&lt;div class="ancestor"&gt;&lt;/div&gt;
+						<div class="descendant">
+							&lt;div class="descendant"&gt;&lt;/div&gt;
+						</div>
+						<div class="descendant">
+							&lt;div class="descendant"&gt;&lt;/div&gt;
+						</div>
+						<div class="descendant">
+							&lt;div class="descendant"&gt;&lt;/div&gt;
+						</div>
+						<div class="descendant">
+							&lt;div class="descendant"&gt;&lt;/div&gt;
+							<div class="descendant">
+								&lt;div class="descendant"&gt;&lt;/div&gt;
+							</div>
+							<div class="descendant">
+								&lt;div class="descendant"&gt;&lt;/div&gt;
+							</div>
+						</div>
+						<div class="descendant">
+							&lt;div class="descendant"&gt;&lt;/div&gt;
+						</div>
+					</div>
+					<div class="ancestor">
+						&lt;div class="ancestor"&gt;&lt;/div&gt;
+						<div class="descendant">
+							&lt;div class="descendant"&gt;&lt;/div&gt;
+						</div>
+						<div class="descendant">
+							&lt;div class="descendant"&gt;&lt;/div&gt;
+						</div>
+						<div class="descendant">
+							&lt;div class="descendant"&gt;&lt;/div&gt;
+						</div>
+						<div class="descendant">
+							&lt;div class="descendant"&gt;&lt;/div&gt;
+							<div class="descendant">
+								&lt;div class="descendant"&gt;&lt;/div&gt;
+							</div>
+							<div class="descendant">
+								&lt;div class="descendant"&gt;&lt;/div&gt;
+							</div>
+						</div>
+						<div class="descendant">
+							&lt;div class="descendant"&gt;&lt;/div&gt;
+						</div>
+						<h5>Now, &lt;h5&gt; is the :last-child!</h5>
+					</div>
+				</div>
+			</section>
+		</section>
+		<section id="pseudo-elements" class="topic">
+			<h2>Pseudo Elements</h2>
+			<p>Defined by two colons <code>::pseudo-element</code>. These selectors add elements the page when applied to a CSS selector.</p>
+			<section id="after" class="subsection">
+				<h3>::after</h3>
+				<p>Creates a fake element that is a fake last child of it's parent element. The parent element is defined by the css-selector it's added to.</p>
+				<code class="block">
+					tag::after{ ... }<br/>
+					.class::after { ... }<br/>
+					#id::after { ... }<br/>
+				</code>
+				<div class="example">
+					<h4>Example</h4>
+					<code class="block">
+						.after-example::after {...}<br/>
+						.after-example.styled::after {...}
+					</code>
+					<div class="after-example">
+						&lt;div class="after-example"&gt;&lt;/div&gt;
+					</div>
+					<div class="after-example styled">
+						&lt;div class="after-example styled"&gt;&lt;/div&gt;
+					</div>
+				</div>
+			</section>
+			<section id="before" class="subsection">
+				<h3>::before</h3>
+				<p>Creates a psuedo-element that is the fake first child of it's parent element.</p>
+				<code class="block">
+					tag::before{ ... }<br/>
+					.class::before { ... }<br/>
+					#id::before { ... }<br/>
+				</code>
+				<div class="example">
+					<h4>Example</h4>
+					<code class="block">
+						.before-example::before {...}<br/>
+						.before-example.styled::before {...}
+					</code>
+					<div class="before-example">
+						&lt;div class="before-example"&gt;&lt;/div&gt;
+					</div>
+					<div class="before-example styled">
+						&lt;div class="before-example styled"&gt;&lt;/div&gt;
+					</div>
+				</div>
+			</section>
+		</section>
+	</section>
+	<footer>
+
+	</footer>
+</body>
+</html>
