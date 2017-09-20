@@ -1,0 +1,57 @@
+html,
+body {
+	height: 100%;
+	width: 100%;
+}
+section {
+	margin-top: 4rem;
+}
+.example {
+	width: 80rem;
+	height: 40rem;
+	margin: auto;
+	background-color: antiquewhite;
+}
+.absolute {
+	background-image: url('http://elgl.org/wp-content/uploads/2014/04/tumblr_ll45vo8Xls1qzaqk3o1_400.gif');
+}
+.relative {
+	background-image: url('images/tim-and-eric-mind-blown.gif');
+}
+.repeat,
+.repeat-x,
+.repeat-y,
+.no-repeat {
+	background-image: url('https://s-media-cache-ak0.pinimg.com/originals/74/04/a0/7404a0d43a522acf6a6275c3ce3ca0ef.jpg');
+	background-size: 20rem;
+}
+.repeat-x {
+	background-repeat: repeat-x;
+}
+.repeat-y {
+	background-repeat: repeat-y;
+}
+.no-repeat {
+	background-repeat: no-repeat;
+}
+/* background-positin: x y*/
+.no-repeat.center {
+	background-position: center center;
+}
+.no-repeat.top-left {
+	background-position: left top;
+}
+.no-repeat.bottom-right {
+	background-position: right bottom;
+}
+.attachment-fixed,
+.attachment-scroll {
+	background-image: url('http://www.dreadcentral.com/wp-content/uploads/2017/08/flyinglotus.jpg');
+	background-size: cover;
+}
+.attachment-fixed {
+	background-attachment: fixed;
+}
+.attachment-scroll {
+	background-attachment: scroll;
+}
