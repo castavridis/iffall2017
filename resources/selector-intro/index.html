@@ -84,10 +84,17 @@
 		<section id="intro" class="topic">
 			<h2>About This Document</h2>
 			<section class="subsection">
+				<h3>Sections</h3>
+				<p>Section description with generic selector rule set with property declarations represented as <code>...</code>.</p>
+				<code class="block">selector {...}</code>
 				<div class="example">
 					<h4>Example</h4>
+					<p>Code for example will show CSS selectors that more closely align with CSS rule sets defined in <code>styles.css</code>.</p>
 					<code class="block">
-						css-selector { ... }
+						div { ... }<br />
+						div.selected { ... }<br />
+						div.selected.blue { ... }<br />
+						div.selected.green { ... }
 					</code>
 					<h4>Legend</h4>
 					<div>
@@ -109,7 +116,7 @@
 			<h2>Basic Selectors</h2>
 			<section id="tags" class="subsection">
 				<h3>Tags</h3>
-				<p>Bare element tag. No "#", no ".". Global changes to all selected tags.</p>
+				<p>Bare element tag. No <code>#</code>, no <code>.</code>. Global changes to all selected tags.</p>
 				<code class="block">
 					tag { css-property: value; }
 				</code>
@@ -137,7 +144,7 @@
 			</section>
 			<section id="classes" class="subsection">
 				<h3>Classes</h3>
-				<p>Uses "." before class name. e.g.) .selected to select &lt;div class="selected"&gt;&lt;/div&gt;. Use classes for styles you want to use again and again.</p>
+				<p>Uses <code>.</code> before class name. e.g.) <code>.selected</code> to select <code>&lt;div class="selected"&gt;&lt;/div&gt;</code>. Use classes for styles you want to use again and again.</p>
 				<code class="block">
 					.class { css-property: value; }
 				</code>
@@ -166,7 +173,7 @@
 			</section>
 			<section id="ids" class="subsection">
 				<h3>IDs</h3>
-				<p>Uses "#" before id. e.g.) #selected-by-id. IDs are used for unique elements and can be used for other purposes.</p>
+				<p>Uses <code>#</code> before id. e.g.) <code>#selected-by-id</code>. IDs are used for unique elements and can be used for other purposes.</p>
 				<code class="block">
 					#id { css-property: value; }
 				</code>
@@ -182,8 +189,8 @@
 					<div>
 						&lt;div&gt;&lt;/div&gt;
 					</div>
-					<div id="selected-by-id">
-						&lt;div id="selected-by-id"&gt;&lt;/div&gt;
+					<div id="selected-by-id" class="selected">
+						&lt;div id="selected-by-id" class="selected"&gt;&lt;/div&gt;
 					</div>
 					<div class="selected">
 						&lt;div class="selected"&gt;&lt;/div&gt;
@@ -198,6 +205,7 @@
 			<h2>Nested Selectors</h2>
 			<section id="descendants" class="subsection">
 				<h3>Descendants</h3>
+				<p>Descendants defined by a single space between each selector.</p>
 				<code class="block">
 					.ancestor .descendant { css-property: value; }
 				</code>
@@ -231,6 +239,7 @@
 			</section>
 			<section id="child" class="subsection">
 				<h3>Child (Immediate Descendants)</h3>
+				<p>Uses <code>></code> only the children elements, or immediate descendants, matching the selector following the <code>></code> are selected.</p>
 				<code class="block">
 					.ancestor > .descendant { css-property: value; }
 				</code>
