@@ -1,0 +1,228 @@
+* {
+    box-sizing: content-box;
+}
+html,
+body {
+	width: 100%;
+	height: 100%;
+	background: black;
+	margin: 0;
+	padding: 0;
+	font-family: 'Karla', sans-serif;
+	line-height: 1.45;
+	font-size: 18px;
+}
+body {
+	width: 80rem;
+	margin: auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	margin-top: 0;
+}
+h1 {
+	font-size: 1.5rem;
+}
+code {
+	color: slateblue;
+	background-color: aliceblue;
+	font-family: 'Cutive Mono', monospace;
+	display: inline-block;
+	vertical-align: middle;
+	border-radius: 2px;
+	padding-left: 0.25rem;
+	padding-right: 0.5rem;
+}
+code.block {
+	padding: 0.5rem;
+	display: block;
+	margin-bottom: 1rem;
+}
+header {
+	background-color: white;
+	padding: 1rem 2rem 2rem;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+}
+header a,
+header a:visited {
+	color: mediumslateblue;
+}
+header a:hover {
+	background-color: mediumslateblue;
+	color: white;
+}
+header a:active {
+	background-color: darkgoldenrod;
+	color: white;
+}
+div {
+	color: black;
+}
+nav ul {
+	list-style-type: none;
+	text-align: left;
+	margin: 0;
+	padding: 0;
+	width: 100%;
+}
+nav > ul > li {
+	width: 24%;
+	margin: 0;
+	display: inline-block;
+	vertical-align: top;
+}
+nav ul ul {
+	padding-left: 1rem;
+}
+section {
+	padding: 2rem;
+}
+a {
+	text-decoration: none;
+}
+a:link {
+	text-decoration: underline;
+}
+a:visited {
+	text-decoration: line-through;
+}
+.wrapper {
+	margin-top: 20rem;
+	padding-top: 2rem;
+}
+.topic {
+	background-color: antiquewhite;
+}
+.topic + .topic {
+	margin-top: 4rem;
+}
+.subsection {
+	background-color: white;
+}
+.subsection + .subsection {
+	margin-top: 2rem;
+}
+.example {}
+.example div,
+.nested-example div {
+	border: 1px solid tan;
+	background-color: white;
+}
+.example div {
+	height: 9.5rem;
+	width: 9.5rem;
+	padding: 1rem;
+	display: inline-block;
+    vertical-align: top;
+}
+.example div + div {
+	margin-left: 2rem;
+}
+.example div.selected {
+	background-color: coral;
+	color: white;
+}
+.nested-example div {
+	padding: 2rem;
+}
+#basic {}
+#tags {}
+#tags .example div {
+	background-color: coral;
+	color: white;
+}
+#classes {}
+div.selected.blue {
+	background-color: darkturquoise;
+}
+div.selected.green {
+	background-color: yellowgreen;
+}
+#ids {}
+#selected-by-id {
+	color: white;
+	background-color: yellowgreen;
+}
+#nested {}
+.ancestor + .ancestor {
+	margin-top: 2rem;
+}
+.ancestor h5 {
+	margin-top: 1rem;
+	padding: 1rem;
+}
+.descendant {
+	margin-top: 1rem;
+}
+.sibling {
+
+}
+#descendants {}
+#descendants .ancestor .descendant {
+	background-color: coral;
+	color: white;
+}
+#child {}
+#child .ancestor > .descendant {
+	background-color: coral;
+	color: white;
+}
+#adjacent {}
+#adjacent .sibling-selected + .sibling-selected {
+	background-color: coral;
+	color: white;
+}
+#general {}
+#general .sibling-selected ~ .sibling-selected {
+	background-color: coral;
+	color: white;
+}
+#pseudo-classes {}
+#a-link {}
+#a-visited {}
+#hover {}
+.hover-example:hover {
+	background-color: coral;
+	color: white;
+}
+#active {}
+.active-example:active {
+	background-color: yellowgreen;
+	color: white;
+}
+#first {}
+#first .ancestor :first-child {
+	background-color: coral;
+	color: white;
+}
+#last {}
+#last .ancestor :last-child {
+	background-color: coral;
+	color: white;
+}
+#pseudo-elements {}
+#after {}
+.after-example::after {
+	content: "After Content";
+}
+.after-example.styled::after {
+	content: "After Content Can Be Styled";
+	background-color: coral;
+	color: white;
+}
+#before {}
+.before-example::before {
+	content: "Before Content";
+}
+.before-example.styled::before {
+	content: "Before Content Can Be Styled";
+	background-color: coral;
+	color: white;
+}
