@@ -24,6 +24,9 @@
 						<li>
 							<a href="#ids">IDs</a>
 						</li>
+						<li>
+							<a href="#multiple-selectors">Multiple Selectors</a>
+						</li>
 					</ul>
 				</li>
 				<li>
@@ -197,6 +200,37 @@
 					</div>
 					<div class="selected">
 						&lt;div class="selected"&gt;&lt;/div&gt;
+					</div>
+				</div>
+			</section>
+			<section id="multiple-selectors" class="subsection">
+				<h3>Multiple Selectors</h3>
+				<p>You can select multipl</p>
+				<code class="block">
+					tag.class { ... }
+					.class.class-two.class-three { ... }
+					#id.class { ... }
+				</code>
+				<div class="example">
+					<h4>Example</h4>
+					<code class="block">
+						.selected.big {...}<br/>
+						.selected.blue.big {...}
+					</code>
+					<div>
+						&lt;div&gt;&lt;/div&gt;
+					</div>
+					<div class="selected">
+						&lt;div class="selected"&gt;&lt;/div&gt;
+					</div>
+					<div class="selected big">
+						&lt;div class="selected big"&gt;&lt;/div&gt;
+					</div>
+					<div class="selected blue">
+						&lt;div class="selected blue"&gt;&lt;/div&gt;
+					</div>
+					<div class="selected blue big">
+						&lt;div class="selected blue big"&gt;&lt;/div&gt;
 					</div>
 				</div>
 			</section>
